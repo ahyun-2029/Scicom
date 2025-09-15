@@ -12,4 +12,8 @@ def single_tax(pay):
         if pay > bracket[0]:
             tax += (pay - bracket[0]) * bracket[1]
             pay = bracket[0]
-    return tax + pay * .
+    return tax + pay * .1
+
+import sys
+
+print(single_tax(int(sys.argv[1])))
